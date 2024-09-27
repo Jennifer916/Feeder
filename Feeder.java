@@ -10,7 +10,11 @@ public class Feeder {
      * Simulates one day with numBirds birds or possibly a bear at the bird
      * feeder, as described in part (a) Precondition: numBirds > 0
      */
-   
+    public Feeder (int c)
+    {
+        currentFood =c;
+    }
+    public Feeder () {}
     public void simulateOneDay(int numBirds)
     {
         if(Math.random() < 0.05) currentFood = 0;
@@ -44,12 +48,10 @@ public class Feeder {
         }
         return day;
     }
-    public Feeder (int c)
+    public String toString()
     {
-        currentFood =c;
+        return "Current Food: " + currentFood;
     }
-    public Feeder () {
-    }
-        
-    }
+
+}
 
